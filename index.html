@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaboo Font Diff - ユーザーマニュアル</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #333;
+            border-left: 5px solid #0056b3;
+            padding-left: 10px;
+            margin-top: 30px;
+            background: #f9f9f9;
+            padding: 5px 10px;
+        }
+
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .note {
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            padding: 10px;
+            border-radius: 5px;
+            color: #856404;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .disclaimer {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kaboo Font Diff ユーザーマニュアル</h1>
+
+    <div style="background:#eef; padding:15px; border:1px solid #ccf; border-radius:5px; margin-bottom:20px;">
+        <a href="./help/download/kaboofontdiff_win64_v1000.zip"
+            style="font-weight:bold; font-size:1.1em; text-decoration:none; color:#0366d6;">
+            ⬇ Win64(.NET)版ダウンロード (約43MB)
+        </a>
+    </div>
+    <p><strong>Kaboo Font Diff</strong>
+        は、インストールされているフォントを効率的に比較・管理・プレビューするためのWindowsアプリケーションです。特定のテキストが各フォントでどのように表示されるかを一覧で確認し、最適なフォント選びをサポートします。</p>
+
+    <img src="./help/mainform.png" alt="Kaboo Font Diff メイン画面" class="screenshot">
+
+    <h2>主な機能と使い方</h2>
+
+    <h3>1. フォントセットの管理 (Font Sets)</h3>
+    <p>用途に合わせて、比較したいフォントの組み合わせを「セット」として保存できます。</p>
+    <ul>
+        <li><strong>Select</strong>: 以前に作成したフォントセットを切り替えます。</li>
+        <li><strong>New</strong>: 新しい空のフォントセットを作成します。</li>
+        <li><strong>Rename</strong>: 現在のセットの名前を変更します。</li>
+        <li><strong>Delete</strong>: 現在のセットを削除します。</li>
+    </ul>
+
+    <h3>2. フォントの追加と削除 (Manage Fonts)</h3>
+    <p>PCにインストールされている全フォントから、セットに追加するフォントを選びます。</p>
+    <ul>
+        <li><strong>Available (左リスト)</strong>: システムにインストールされているフォントの一覧です。
+            <ul>
+                <li>検索ボックスを使用して、フォント名で絞り込みが可能です。</li>
+            </ul>
+        </li>
+        <li><strong>Add &gt;&gt;</strong>: 選択したフォントをセットに追加します。</li>
+        <li><strong>Add All &gt;&gt;&gt;</strong>: 検索ボックスで絞り込まれた<strong>全てのフォント</strong>を一括でセットに追加します。特定のファミリー（例:
+            "Arial"）をまとめて追加したい場合に便利です。</li>
+        <li><strong>&lt;&lt; Remove</strong>: セット (右リスト) から選択したフォントを削除します。</li>
+        <li><strong>In Set (右リスト)</strong>: 現在のセットに含まれているフォントの一覧です。</li>
+    </ul>
+
+    <h3>3. プレビューの確認 (Preview Area)</h3>
+    <p>画面右側のパネルで、追加したフォントの実際の表示を確認できます。</p>
+    <ul>
+        <li><strong>カード表示</strong>: 各フォントごとにカード形式でテキストが表示されます。</li>
+        <li><strong>削除ボタン (X)</strong>: 各カードの右上にある「X」ボタンを押すと、そのフォントをセットから直接削除できます（Weeding out機能）。</li>
+        <li><strong>ページネーション</strong>: 大量のフォントを追加した場合でも動作が重くならないよう、1ページあたり50件ずつ表示されます。画面下部の「&lt; Prev / Next
+            &gt;」ボタンでページを切り替えてください。</li>
+    </ul>
+
+    <h3>4. 表示設定 (Display Settings)</h3>
+    <p>プレビューの見た目をカスタマイズします。</p>
+    <ul>
+        <li><strong>Size (pt)</strong>: フォントサイズを変更します。</li>
+        <li><strong>Vertical Layout</strong>: 日本語の縦書き表示に切り替えます（右から左へ流れるレイアウトになります）。</li>
+        <li><strong>Color Emoji</strong>: カラー絵文字を表示するためのモードです。
+            <br><small>※ Vertical Layout と Color Emoji は同時に有効にできません。</small>
+        </li>
+        <li><strong>Text Color / Back Color</strong>: 文字色と背景色を変更します。ダークモードの確認などに便利です。</li>
+        <li><strong>Quality</strong>: 描画品質（アンチエイリアス設定）を変更します（SystemDefault, AntiAlias, ClearTypeなど）。</li>
+    </ul>
+
+    <h3>5. テキスト入力 (Text)</h3>
+    <p>プレビューに使用するテキストを自由に入力できます。</p>
+    <ul>
+        <li><strong>テキストボックス</strong>: ここに入力した内容がリアルタイム（入力完了後）にプレビューに反映されます。</li>
+        <li><strong>プリセットボタン</strong>:
+            <ul>
+                <li><code>123</code>: 数字のサンプル</li>
+                <li><code>ABC</code>: アルファベットのパングラム (The quick brown fox...)</li>
+                <li><code>漢</code>: 漢字・ひらがな・カタカナのサンプル</li>
+                <li><code>Text</code>: 長文テキスト (Lorem ipsum...)</li>
+                <li><code>Emoji</code>: 一般的な絵文字セット</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="disclaimer">
+        <h3>免責事項</h3>
+        <p>本ソフトウェア（以下「本ソフト」）は、「現状のまま（AS
+            IS）」提供されるものであり、明示的または黙示的を問わず、商品性、特定の目的への適合性、および権利非侵害の保証を含むがこれらに限定されない、いかなる種類の保証も行いません。</p>
+        <p>本ソフトの使用または使用不能から生じるデータの損失、業務の中断、精神的損害、またはその他のいかなる金銭的損失や損害に関して、開発者および権利者は一切の責任を負わないものとします。ご自身の責任においてご利用ください。
+        </p>
+        <p>本ソフトは、ユーザーの環境にインストールされているフォント情報を読み取りますが、フォントファイル自体を変更・削除することはありません。</p>
+    </div>
+
+    <footer>
+        &copy; 2025 Kaboo Font Diff. All rights reserved.
+    </footer>
+</body>
+
+</html>
